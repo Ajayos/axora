@@ -1,0 +1,44 @@
+{
+  "name": "axora",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A native Node.js HTTP foundation for a unified application framework.",
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm run build && node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajayos/axora.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "http",
+    "typescript",
+    "esm",
+    "framework",
+    "axora"
+  ]
+}
